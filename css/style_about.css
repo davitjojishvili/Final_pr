@@ -155,9 +155,11 @@
 
 
 @media (max-width:768px){
+    
 
     .about-section{
         padding:30px 25px;
+        background-image:url("../img/about_res_back.png");
     }
 
     .about-top{
@@ -219,6 +221,7 @@
 
     .about-section{
         padding:20px 15px;
+        background-image:url("../img/about_res_back.png");
     }
 
     .about-text h2{
@@ -261,6 +264,7 @@
 
     .about-section{
         padding:15px 10px;
+        background-image:url("../img/about_res_back.png");
     }
 
     .about-text h2{
