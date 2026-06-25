@@ -4,9 +4,9 @@
 const main = document.querySelector(".main");
 
 const backgrounds = [
-    "../img/home_main_back.png",
-    "../img/home_main_back_1.png",
-    "../img/home_main_back_2.png",
+    "./img/home_main_back.png",
+    "./img/home_main_back_1.png",
+    "./img/home_main_back_2.png",
 ];
 
 let current = 0;
