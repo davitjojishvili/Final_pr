@@ -1,0 +1,504 @@
+
+/* პირველი დიდი სექცია(უკანა ფონი და დიდი ტექსტი)-ში რაც არი ყველაფერი */
+
+.main{
+    position:relative;
+    min-height:85vh;
+
+    background-image:url("../img/home_main_back.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    align-items:center;
+
+    padding-left:100px;
+    transition:background-image 1s ease;
+}
+
+.main_text{
+    max-width:900px;
+}
+
+
+.main_text h1{
+    font-size:110px;
+    line-height: 1;
+    letter-spacing:3px;
+}
+
+.main_text span{
+    color: rgb(238, 32, 35);
+}
+
+.main_text p{
+    font-size: 24px;
+    margin-top:20px;
+    color:#ccc;
+    letter-spacing:5px;
+}
+
+.buttons{
+    margin-top:30px;
+}
+
+button{
+    padding:18px 40px;
+    border:none;
+    background:rgb(182,34,34);
+    color:rgb(206,206,206);
+    cursor:pointer;
+    margin-right:15px;
+    font-size:24px;
+    font-weight:500;
+}
+
+.watch_btn{
+    background:transparent;
+    border:1px solid rgb(206, 201, 201);
+}
+
+.main-image img{
+    width:700px;
+    max-width:100%;
+}
+
+/* კარუსელამდე txt*/
+
+.features{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap: wrap;
+    padding:30px 80px;
+
+    border-top:1px solid #222;
+    border-bottom:1px solid #222;
+}
+
+.feature{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap: 10px;
+    font-size: 25px;
+}
+
+
+/* რა გააკეთეს ნაციონალებმა? კარუსელები!!! */
+
+.products{
+    padding:60px 80px;
+}
+
+.products_header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.products_header h2{
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+
+.carousel_controls{
+    display:flex;
+    gap:10px;
+}
+
+.carousel_controls button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width:45px;
+    height:45px;
+
+    border:none;
+    border-radius:10%;
+
+    background:#111;
+    color:white;
+
+    transition:.3s;
+}
+
+.carousel_controls button:hover{
+    background:#ee2023;
+}
+
+.product-container{
+    display:flex;
+    gap:20px;
+
+    overflow:hidden;
+    scroll-behavior:smooth;
+}
+
+.card{
+    position:relative;
+    flex:0 0 calc((100% - 80px) / 5);
+
+    height:320px;
+    overflow:hidden;
+}
+
+.card-bg{
+    position:absolute;
+    
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:1;
+    
+}
+
+.gun{
+    position:absolute;
+
+    width:80%;
+
+    left:50%;
+    top:35%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:2;
+
+    transition: transform .4s ease;
+}
+
+.gun1{
+    position:absolute;
+
+    width:90%;
+
+    left:55%;
+    top:32%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:2;
+    transition: transform .4s ease;
+}
+
+.gun2{
+    position:absolute;
+
+    width:100%;
+
+    left:50%;
+    top:37%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:2;
+
+    transition: transform .4s ease;
+}
+
+.gun3{
+    position:absolute;
+
+    width: 70%;
+
+    left:50%;
+    top:30%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:2;
+
+    transition: transform .4s ease;
+}
+
+.gun4{
+    position:absolute;
+
+    width: 110%;
+
+    left:49%;
+    top:40%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:2;
+
+    transition: transform .4s ease;
+}
+
+
+
+.card:hover .gun,
+.card:hover .gun1,
+.card:hover .gun2,
+.card:hover .gun3,
+.card:hover .gun4{
+    transform: translate(-50%, -55%) scale(1.1);
+
+}
+
+.card h3{
+    position:absolute;
+
+    font-size: 30px;
+    left:20px;
+    bottom: 80px;
+
+    z-index:3;
+
+    color:white;
+}
+
+.card p{
+    position:absolute;
+    
+    font-size: 21px;
+    left:20px;
+    bottom:50px;
+
+    z-index:3;
+
+    color:#ee2023;
+}
+
+
+.user_list{
+    padding: 50px;
+}
+
+.user_list h2{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.user-card{
+    background: #1d1d1d;
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+#top_btn{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display:none;
+    z-index: 100;
+}
+
+
+.cookie-box{
+    position: fixed;
+    bottom: 20px;
+
+    left:50%;
+    transform:translateX(-50%);
+
+    background: #222;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 200;
+}
+
+.cookie-box button{
+    background: orange;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+
+@media (max-width:1024px){
+    .main{
+        padding-left:60px;
+    }
+    .main_text h1{
+        font-size:80px;
+    }
+
+    .card{
+        flex:0 0 calc((100% - 40px) / 3);
+    }
+
+    .products,
+    .features,
+    .newsletter{
+        padding-left:40px;
+        padding-right:40px;
+    }
+}
+@media (max-width:768px){
+    .main{
+        padding:0 40px;
+    }
+
+    .features{
+        justify-content:center;
+        gap:20px;
+    }
+
+    .feature{
+        min-width:250px;
+    }
+
+    .products_header{
+        flex-direction:column;
+        gap:20px;
+    }
+}
+
+
+@media (max-width:480px){
+    #top_btn{
+    position: fixed;
+    right:-5px;
+    bottom: 35px;
+    display:none;
+    z-index: 100;
+    }
+
+    .main{
+        padding:20px;
+    }
+
+    .main_text{
+        margin:0;
+    }
+
+    .main_text h1{
+        font-size:42px;
+    }
+
+    .main_text p{
+        font-size:16px;
+        letter-spacing:2px;
+    }
+
+    .buttons{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .buttons button{
+        width:100%;
+    }
+
+    .card{
+        flex:0 0 100%;
+        height: 280px;
+    }
+
+    .products,
+    .features,
+    .newsletter,
+    .user_list{
+        padding:20px;
+    }
+
+    .feature{
+        width:100%;
+        justify-content:center;
+    }
+
+    .products_header h2{
+    font-size:24px;
+    }
+
+    .carousel_controls{
+        width:100%;
+        justify-content:center;
+    }
+
+   .card{
+        flex:0 0 100%;
+        height:280px;
+    }
+
+    .card h3{
+        left:50%;
+        bottom:65px;
+        transform:translateX(-50%);
+        width:90%;
+        text-align:center;
+        font-size:20px;
+        line-height:1;
+    }
+
+    .card p{
+        left:50%;
+        bottom:35px;
+        transform:translateX(-50%);
+        width:90%;
+        text-align:center;
+        font-size:18px;
+    }
+
+
+    .cookie-box p{
+        margin:0;
+        text-align:center;
+        line-height:1.2;
+    }
+     .card{
+        height:340px;
+    }
+
+    .gun,
+    .gun1,
+    .gun2,
+    .gun3,
+    .gun4{
+        top: 40%;
+    }
+
+    .card h3{
+        bottom: 80px;
+    }
+
+    .card p{
+        bottom:55px;
+    }
+}
+
+@media (max-width:320px){
+    #top_btn{
+        position: fixed;
+        right: 100px;
+        bottom: 150px;
+        display:none;
+        z-index: 100;
+    }
+    .main_text h1{
+        font-size:32px;
+    }
+
+    .main_text p{
+        font-size:14px;
+    }
+
+
+    .card h3{
+        font-size:22px;
+    }
+
+    .card p{
+        font-size:18px;
+    }
+}

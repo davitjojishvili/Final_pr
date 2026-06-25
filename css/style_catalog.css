@@ -1,0 +1,568 @@
+
+/*უკანა და ზოგადი*/
+.catalog{
+    width:100%;
+    min-height:100vh;
+    
+    background:url("../img/catalog_main_back.png");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    padding:80px 5%;
+}
+
+.catalog h1{
+    color:#ac0f0f;
+    font-size:52px;
+    margin-bottom:40px;
+}
+
+.catalog-content{
+    display:flex;
+    gap:40px;
+}
+
+/*ფილტრი და ჩამონათვალი*/
+
+.filters{
+    width:180px;
+    flex-shrink:0;
+    font-size: 22px;
+}
+
+.filters h3{
+    color:#fff;
+    font-size:30px;
+    margin-bottom:20px;
+    padding-left:10px;
+    border-left:3px solid #d10000;
+}
+
+.filters ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.filters li{
+    color:#9a9a9a;
+    padding:12px 15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.filters li:hover{
+    color:#d10000;
+}
+
+.filters li.active{
+    background:#111;
+    color:#e63030;
+    border-left:3px solid #d10000;
+}
+
+/* კუბიკები */
+
+.cards{
+    flex:1;
+    display:flex;
+    gap:20px;
+    
+}
+
+
+.card{
+    flex:1;
+    height:600px;
+
+    position:relative;
+    overflow: hidden;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    transition:.5s;
+} 
+
+
+*/
+
+
+
+.cards:hover .card{
+    flex:.667;
+}
+
+.cards .card:hover{
+    flex:1.888;
+    border-color:#d10000;
+}
+
+
+
+/* კუბიკების ფონი */
+
+.card-bg{
+    position:absolute;
+    inset:0;
+
+    background-size:cover;
+    background-position:center;
+
+    z-index:1;
+
+    transition:.4s ease;
+}
+
+.card:hover .card-bg{
+    transform:scale(1.15);
+}
+
+.rifle-bg{
+    background-image:url("../img/card_back.jpg");
+}
+
+.pistol-bg{
+    background-image:url("../img/card_back1.jpg");
+}
+
+.sniper-bg{
+    background-image:url("../img/card_back2.jpg");
+}
+
+
+/* იარაღები */
+
+.weapon{
+    position:absolute;
+    left:50%;
+    bottom:160px;
+
+    width:100%;
+    max-width:100%;
+
+    transform:translateX(-50%);
+    z-index:5;
+
+    transition:.4s ease;
+
+}
+
+/*ტექსტი*/
+
+.weapon-desc{
+    position:absolute;
+    left:170px;
+    bottom:165px;
+
+    color:#bdbdbd;
+    font-size: 22px;
+
+    overflow:hidden;
+    white-space:nowrap;
+
+    width:0;
+
+    opacity:0;
+
+    transition:opacity .2s;
+
+    z-index: 200;
+}
+
+.card:hover .weapon-desc{
+    opacity:1;
+    animation:typewriter 1.9s steps(40) forwards;
+}
+
+.weapon-desc1{
+    position:absolute;
+    left:170px;
+    bottom:140px;
+
+    color:#bdbdbd;
+    font-size: 22px;
+
+    overflow:hidden;
+    white-space:nowrap;
+
+    width:0;
+
+    opacity:0;
+
+    transition:opacity .2s;
+
+    z-index: 200;
+}
+
+.card:hover .weapon-desc1{
+    opacity:1;
+    animation:typewriter 1.9s steps(40) forwards;
+    animation-delay:1.4s;
+}
+
+.weapon-desc2{
+    position:absolute;
+    left:170px;
+    bottom:115px;
+
+    color:#bdbdbd;
+    font-size: 22px;
+
+    overflow:hidden;
+    white-space:nowrap;
+
+    width:0;
+
+    opacity:0;
+
+    transition:opacity .2s;
+
+    z-index: 200;
+}
+
+.card:hover .weapon-desc2{
+    opacity:1;
+    animation:typewriter 1.9s steps(40) forwards;
+    animation-delay:2.9s;
+}
+
+
+@keyframes typewriter{
+    from{
+        width:0;
+    }
+    to{
+        width:100%;
+    }
+}
+
+
+.info{
+    position:absolute;
+    left:20px;
+    right:20px;
+    bottom:20px;
+
+    z-index:10;
+}
+
+.info h2{
+    color:#fff;
+    font-size:69px;
+    margin-bottom:5px;
+}
+
+.info span{
+    display:block;
+    color:#8f8f8f;
+    font-size:19px;
+    margin-bottom:15px;
+}
+
+.details{
+    max-height:0;
+    opacity:0;
+    overflow:hidden;
+
+    transition:.4s;
+}
+
+.card:hover .details{
+    max-height:200px;
+    opacity:1;
+    margin-bottom:15px;
+}
+
+.details li{
+    list-style:none;
+    color:#ddd;
+    margin-bottom:8px;
+    font-size:15px;
+}
+
+.details li::before{
+    content:" ";
+    color:#d10000;
+}
+
+.info a{
+    color:#d10000;
+    text-decoration:none;
+    font-weight:700;
+    font-size: 20px;
+}
+
+
+
+
+@media (max-width:1024px){
+    .cards{
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .cards:hover .card,
+    .cards .card:hover{
+        flex:none;
+    }
+
+    .card{
+        width:100%;
+        height:420px;
+        min-height:420px;
+        flex:none;
+    }
+    .weapon{
+        scale: 90%;
+        position: absolute;
+        bottom:-120px;
+    }
+
+    .catalog h1{
+        font-size:42px;
+        text-align:center;
+    }
+
+    .catalog-content{
+        flex-direction:column;
+    }
+
+    .filters{
+        width:100%;
+    }
+
+    .filters ul{
+        flex-direction:row;
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+
+    .info h2{
+        font-size:50px;
+    }
+
+    .weapon-desc{
+        position:absolute;
+        left:170px;
+        bottom:165px;
+    }
+
+    .weapon-desc1{
+        left:170px;
+        bottom:140px;
+    }
+
+    .weapon-desc2{
+        left:170px;
+        bottom:115px;
+    }
+
+    .card:hover .weapon{
+        transform:translateX(-50%) scale(0.90) rotate(-23deg) translateY(-80px) translateX(30px);
+    }
+    
+}
+
+
+
+
+@media (max-width:768px){
+    .cards{
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+    }
+
+
+
+    .card{
+        width:100%;
+        height:420px;
+        min-height:420px;
+        flex:none;
+    }
+
+    .weapon{
+        position: absolute;
+        bottom: 180px;
+    }
+    .weapon-desc{
+        position:absolute;
+        left:170px;
+        bottom:165px;
+    }
+
+    .weapon-desc1{
+        left:170px;
+        bottom:140px;
+    }
+
+    .weapon-desc2{
+        left:170px;
+        bottom:115px;
+    }
+
+   .weapon{
+        bottom:-20px;
+        transition:.4s ease;
+    }
+   
+    .card:hover .weapon{
+        transform:translateX(-50%) scale(0.90) rotate(-23deg) translateY(-80px) translateX(30px);
+    }
+}
+
+
+@media (max-width:480px){
+
+    .catalog h1{
+        font-size:40px;
+    }
+
+    .card{
+        height:380px;
+    }
+
+    .weapon{
+        position: absolute;
+        bottom: 80px;
+    }
+
+
+    .info h2{
+        font-size:28px;
+    }
+
+    .info span{
+        font-size:12px;
+    }
+
+    .details li{
+        font-size:12px;
+    }
+    
+
+    .weapon-desc{
+        position: absolute;
+        left: 93px;
+        top:255px;
+        font-size:14px;
+        height: 300px;
+    
+    }   
+    .weapon-desc1{
+        position: absolute;
+        left: 93px;
+        top:269px;
+        font-size:14px;
+        height: 300px;
+        
+    }
+    .weapon-desc2{
+        position: absolute;
+        left: 93px;
+        top:283px;
+        font-size:14px;
+        height: 300px;
+        
+    }
+}
+
+@media (max-width:320px){
+
+    .weapon{
+        scale: 140%;
+        position: absolute;
+        left: 190px;
+    }
+
+    .card:hover .weapon{
+        transform:translateX(-50%) scale(0.90) rotate(-23deg) translateY(-80px) translateX(45px);
+    }
+
+    .catalog{
+        padding:20px 10px;
+    }
+
+    .catalog h1{
+        font-size:35px;
+        text-align:center;
+        margin-bottom:20px;
+    }
+
+    .filters h3{
+        font-size:18px;
+    }
+
+    .filters ul{
+        gap:5px;
+        justify-content:center;
+    }
+
+    .filters li{
+        font-size:11px;
+        padding:6px 8px;
+    }
+
+    .card{
+        height:340px;
+    }
+
+    .weapon{
+        width:85%;
+        bottom:140px;
+    }
+
+    .info{
+        left:10px;
+        right:10px;
+        bottom:10px;
+    }
+
+    .info h2{
+        font-size:22px;
+        margin-bottom:2px;
+    }
+
+    .info span{
+        font-size:11px;
+        margin-bottom:8px;
+    }
+
+    .details li{
+        font-size:10px;
+        margin-bottom:4px;
+    }
+
+    .info a{
+        font-size:13px;
+    }
+
+    .weapon-desc{
+        position: absolute;
+        left: 5px;
+        top:170px;
+        font-size:12px;
+        
+    }   
+    .weapon-desc1{
+        position: absolute;
+        left: 5px;
+        top:184px;
+        font-size:12px;
+        
+    }
+    .weapon-desc2{
+        position: absolute;
+        left: 5px;
+        top:198px;
+        font-size:12px;
+        
+    }
+
+    
+}

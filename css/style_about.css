@@ -1,0 +1,292 @@
+.about-section{
+    width:100%;
+    min-height:100vh;
+
+    background-image:url("../img/about_main_back.png");
+    background-size:cover;
+    background-position:center;
+
+    padding:30px 40px;
+    color:white;
+}
+
+
+.about-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+}
+
+.about-text{
+    width:38%;
+}
+
+.txt-1{
+    font-size:22px;
+}
+
+.about-text h2{
+    font-size:80px;
+    letter-spacing:2px;
+    margin-bottom:15px;
+    position:relative;
+}
+
+.about-text h2::after{
+    content:"";
+    width:50px;
+    height:3px;
+    background:red;
+    position:absolute;
+    left:0;
+    bottom:-8px;
+}
+
+.about-text h3{
+    margin-top:30px;
+    font-size:40px;
+    line-height:1.4;
+    margin-bottom:20px;
+    letter-spacing: 3px;
+}
+
+.about-text p{
+    color:#c7c7c7;
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+
+.stats{
+    display:flex;
+    align-items:center;
+    margin-top:20px;
+    margin-left:10px;
+}
+
+.stat-box{
+    position:relative;
+    text-align:center;
+    padding:0 30px;
+    transition:0.3s;
+    cursor:pointer;
+    width:220px;
+}
+
+.stat-box h4{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.stat-box span{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.divider{
+    width:1px;
+    height:80px;
+    background:rgba(255,255,255,0.2);
+}
+
+.stat-box:hover{
+    transform:translateY(-5px);
+}
+
+.stat-box:hover h4,
+.stat-box:hover span{
+    color:#ff2a2a;
+}
+
+.stat-text{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    top:100%;
+
+    width:200px;
+
+    opacity:0;
+    visibility:hidden;
+
+    font-size:14px;
+    line-height:1.5;
+    color:#c7c7c7;
+
+    transition:0.3s ease;
+}
+
+.stat-box:hover .stat-text{
+    opacity:1;
+    visibility:visible;
+    margin-top:15px;
+}
+
+
+@media (max-width:1024px){
+
+    .about-text{
+        width:50%;
+    }
+
+    .about-text h2{
+        font-size:65px;
+    }
+
+    .about-text h3{
+        font-size:32px;
+    }
+
+    .stat-box{
+        width:180px;
+        padding:0 20px;
+    }
+
+    .stat-box h4{
+        font-size:45px;
+    }
+
+    .stat-box span{
+        font-size:18px;
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    .about-section{
+        padding:30px 25px;
+    }
+
+    .about-top{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .about-text{
+        width:100%;
+    }
+
+    .about-text h2{
+        font-size:50px;
+    }
+
+    .about-text h2::after{
+        left:50%;
+        transform:translateX(-50%);
+    }
+
+    .about-text h3{
+        font-size:28px;
+    }
+
+    .txt-1{
+        font-size:18px;
+    }
+
+    .stats{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:30px;
+        margin-left:0;
+        margin-top:50px;
+    }
+
+    .divider{
+        display:none;
+    }
+
+    .stat-box{
+        width:220px;
+    }
+
+    .stat-text{
+        position:static;
+        opacity:1;
+        visibility:visible;
+        transform:none;
+        width:100%;
+        margin-top:10px;
+    }
+
+}
+
+
+@media (max-width:480px){
+
+    .about-section{
+        padding:20px 15px;
+    }
+
+    .about-text h2{
+        font-size:38px;
+    }
+
+    .about-text h3{
+        font-size:22px;
+        letter-spacing:1px;
+    }
+
+    .txt-1{
+        font-size:16px;
+    }
+
+    .stats{
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+    }
+
+    .stat-box{
+        width:100%;
+        max-width:260px;
+        padding:0;
+    }
+
+    .stat-box h4{
+        font-size:38px;
+    }
+
+    .stat-box span{
+        font-size:18px;
+    }
+
+}
+
+
+@media (max-width:320px){
+
+    .about-section{
+        padding:15px 10px;
+    }
+
+    .about-text h2{
+        font-size:30px;
+    }
+
+    .about-text h3{
+        font-size:18px;
+    }
+
+    .txt-1{
+        font-size:14px;
+        line-height:1.6;
+    }
+
+    .stat-box h4{
+        font-size:32px;
+    }
+
+    .stat-box span{
+        font-size:16px;
+    }
+
+    .stat-text{
+        font-size:13px;
+    }
+
+}
+

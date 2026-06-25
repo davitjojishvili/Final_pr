@@ -1,0 +1,469 @@
+*{
+    box-sizing:border-box;
+    font-family: 'Teko';
+}
+
+@font-face {
+    font-family: 'Teko';
+    src: url('../fonts/Teko-SemiBold.ttf') format('truetype')
+}
+
+
+
+body{
+    background:#0a0a0a;
+    color:white;
+    font-family: 'Teko';
+}
+
+/* ჰედერში რაც არი ყველაფერი */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
+    background:black;
+    font-family: 'Teko';
+    
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:rgba(0,0,0,0.55);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+
+
+.logo img{
+    height: 110px;
+}
+
+nav{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+nav ul{
+    display:flex;
+    gap: 52px;
+}
+
+nav a{
+    font-size: 20px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:red;
+}
+
+nav a.active{
+    color:#ee2023;
+    position:relative;
+}
+
+nav a.active::after{
+    content:"";
+    position:absolute;
+    left: 0;
+    bottom:-42px;
+    width: 100%;
+    height:2px;
+    background:#ee2023;
+}
+
+.header_icons{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.header_icons img{
+    object-fit:contain;
+    transition:.3s;
+}
+
+
+.header_icons img:hover{
+    transform:scale(1.15);
+}
+
+
+.cart_box{
+    width:131px;
+    height:50px;
+
+    background:#111;
+    border:1px solid #222;
+    border-radius:10px;
+
+    padding:15px;
+
+    display:flex;
+    align-items:center;
+    gap:25px;
+
+    transition:.3s ease;
+    cursor:pointer;
+}
+
+.cart_box:hover{
+    background:#1a1a1a;
+    border-color:#ee2023;
+    transform:translateY(-3px);
+}
+
+.cart_icon img{
+    width:24px;
+    height:24px;
+}
+
+.cart_content{
+    color:#ccc;
+    font-size:18px;
+}
+
+.burger{
+    display: none;
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+
+    padding:70px 80px;
+    margin:80px 0;
+
+    background:linear-gradient(135deg,#161616,#202020);
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.08);
+
+    flex-wrap: wrap;
+}
+
+.newsletter-content{
+    max-width:500px;
+}
+
+.newsletter-tag{
+    display:inline-block;
+
+    padding:6px 14px;
+    margin-bottom:15px;
+
+    background:#ee2023;
+    color:#fff;
+
+    font-size:12px;
+    font-weight:600;
+    border-radius:30px;
+}
+
+.newsletter h2{
+    font-size:42px;
+    color:#fff;
+    margin-bottom:12px;
+}
+
+.newsletter p{
+    color:#bdbdbd;
+    font-size:18px;
+    line-height:1.6;
+}
+
+.newsletter-form{
+    display:flex;
+    align-items:center;
+
+    background:#111;
+    padding:8px;
+    border-radius:60px;
+
+    width:100%;
+    max-width:500px;
+}
+
+.newsletter input{
+    width:100%;
+    min-width:200px;
+
+    border:none;
+    outline:none;
+
+    background:transparent;
+    color:white;
+
+    padding:14px 20px;
+    font-size:16px;
+}
+
+.newsletter input::placeholder{
+    color:#888;
+}
+
+.newsletter button{
+    border:none;
+    cursor:pointer;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    background:#ee2023;
+    color:white;
+
+    font-size:15px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.newsletter button:hover{
+    background:#ff3a3d;
+    transform:translateY(-2px);
+}
+
+/* ბოლო(footer DD) */
+
+footer{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:40px;
+    padding:50px;
+    background:black;
+}
+
+.footer-logo img{
+    height:90px;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+}
+
+.footer-links h4{
+    margin-bottom:15px;
+}
+
+.footer-links a{
+    color:#ccc;
+    text-decoration:none;
+    margin-bottom:8px;
+}
+
+.footer-links a:hover{
+    color:red;
+}
+
+@media (max-width:1024px){
+
+    nav ul{
+        gap:30px;
+    }
+
+    .header_icons{
+        gap:15px;
+    }
+
+    .newsletter{
+        padding:50px 40px;
+    }
+}
+
+@media (max-width:768px){
+
+    header{
+        padding:0 20px;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .burger{
+        display:block;
+        font-size:30px;
+        color:white;
+        z-index:10;
+        position:absolute;
+        right:280px;
+    }
+
+    nav{
+        position:fixed;
+        top:100px;
+        left:0;
+
+        width:100%;
+
+        background:#111;
+
+        display:none;
+
+        transform:none;
+
+        z-index:1001;
+    }
+
+    nav.active{
+        display:block;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:0;
+    }
+
+    nav li{
+        text-align:center;
+        border-bottom:1px solid #222;
+    }
+
+    nav a{
+        display:block;
+        padding:20px;
+        font-size:20px;
+    }
+
+    nav a.active::after{
+        display:none;
+    }
+
+    .logo img{
+        height:90px;
+    }
+
+    .header_icons{
+        gap:12px;
+    }
+
+    .cart_box{
+        width:110px;
+        gap:15px;
+    }
+
+    .newsletter{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .newsletter-form{
+        width:100%;
+        max-width:500px;
+    }
+
+    footer{
+        flex-wrap:wrap;
+        gap:30px;
+        text-align:center;
+    }
+}
+
+@media (max-width:480px){
+   .product-container{
+    gap:0;
+    }
+
+    .card{
+        flex:0 0 100%;
+    }
+    header{
+        padding:0 10px;
+    }
+
+    .logo img{
+        height:70px;
+    }
+
+    .header_icons{
+        gap:8px;
+    }
+    
+    .burger{
+        right: 230px;
+    }
+    .cart_box{
+        width:90px;
+        height:40px;
+        gap:8px;
+        padding:10px;
+    }
+
+    .cart_content{
+        font-size:14px;
+    }
+
+    .newsletter{
+        padding:30px 20px;
+        margin:40px 0;
+    }
+
+    .newsletter h2{
+        font-size:30px;
+    }
+
+    .newsletter p{
+        font-size:16px;
+    }
+
+    .newsletter-form{
+        flex-direction:column;
+        background:none;
+        padding:0;
+        gap:10px;
+    }
+
+    .newsletter input{
+        width:100%;
+    }
+
+    .newsletter button{
+        width:100%;
+    }
+
+    footer{
+        padding:30px 20px;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .footer-logo img{
+        height:70px;
+    }
+}
+
+@media (max-width:320px){
+    .burger{
+        right: 40px;
+    }
+    .logo img{
+        height:55px;
+    }
+    .logo{
+        display: none;
+    }
+
+    .newsletter h2{
+        font-size:24px;
+    }
+
+    .newsletter p{
+        font-size:14px;
+    }
+}
+
+
